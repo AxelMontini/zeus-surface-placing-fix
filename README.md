@@ -1,19 +1,19 @@
-Surface Placing Fix by Axel Montini - Fixes Zeus placing of objects.
-
-To enable use _handler = [] execVM "SurfacePlacingFix\initSurfacePlacingFix.sqf"; in the file init.sqf;
-then copy the scripts folder 
-
-You can omit parameters or use some, according to the documentation at the top of the sqf file.
-Default placing method is unreliable with vehicles (sometimes), but it gets the job done:
-PLACE SH*T ON ROOFS, ON CARRIERS, EVEN IN ZEUS MODE! No more place & ALT+DRAG to bring them where you want!
-
-To use area-dependant parameters, you MUST give as attribute A TRIGGER, with custom dimensions.
-Also as first parameter you must choose a mode.
-		--Read the documentation in the .sqf file--
-		--Read the documentation in the .sqf file--
-		--Read the documentation in the .sqf file--
-			--Read the license before using--
-			--Read the license before using--
-			--Read the license before using--
-			
-Have Fun.
+# ZEUS Surface Placing Fix
+### Place what you want, *where* you want.
+Yep, also on the new aircraft carrier (USS Freedom).
+## How can I use it?
+First, put the source code in the mission folder.
+Then put `_handler = [] execVM "SurfacePlacingFix\initSurfacePlacingFix.sqf";` in the
+file `init.sqf` to automatically run it for every Zeus player once the mission loads.
+## How can I customize it?
+You can provide arguments to the script when initializing it, for example
+`... = ["ACCURATE_AREA", myTrigger] execVM ...` or `... = [LINE_EVERYWHERE"] execVM ...`,
+depending on your needs. Area methods need a trigger as second parameter, which is the area
+in which the script will work. Everywhere methods work everywhere, with their pros and cons.
+Available methods right now are:
+* AREA_DIRECT: Works in a specific area, not accurate nor reliable.
+* AREA_LINE: Works in a specific area, kinda accurate but not always reliable.
+* LINE_EVERYWHERE: Kinda accurate but not always reliable.
+* ACCURATE_AREA: Works in a specific area, very accurate but not always reliable (especially with groups).
+* ACCURATE_EVERYWHERE: ***[Default]*** Very accurate but not always reliable (especially with groups).  
+In short, set up the script, choose your method, (place your trigger) and use it.

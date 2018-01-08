@@ -14,6 +14,9 @@ Available methods right now are:
 * AREA_DIRECT: Works in a specific area, not accurate nor reliable.
 * AREA_LINE: Works in a specific area, kinda accurate but not always reliable.
 * LINE_EVERYWHERE: Kinda accurate but not always reliable.
-* ACCURATE_AREA: Works in a specific area, very accurate but not always reliable (especially with groups).
-* ACCURATE_EVERYWHERE: ***[Default]*** Very accurate but not always reliable (especially with groups).  
+* ACCURATE_AREA: Works in a specific area, very accurate but not always reliable.
+* ACCURATE_EVERYWHERE: ***[Default]*** Very accurate but not always reliable.  
 In short, set up the script, choose your method, (place your trigger) and use it.
+## Known issues
+Vehicles get sometimes spawned higher than the terrain. This behavior isn't documented
+and must be examined in order to fix this problem.
